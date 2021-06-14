@@ -11,6 +11,8 @@ const Home = () => {
     const [searchOption, setSearchOption] = useState('shows');
     const isShowsSearch = searchOption === 'shows';
 
+    
+
     const onSearch = () => {
         apiGet(`/search/${searchOption}?q=${input}`).then(result =>{setResults(result)})
         // https://api.tvmaze.com/search/shows?q=girls
